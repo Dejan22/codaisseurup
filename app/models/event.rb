@@ -1,14 +1,14 @@
 class Event < ApplicationRecord
-  belong_to :user
+  belongs_to :user
+name: string, presence: true
+description: string, presence: true,
+location: string, presence: true,
+price: integet, presence: true
+capacity: integer, presence: true
+includes_food: boolean, presence: true
+include_drinks: boolean, presence: true
+starts_at: date, presence: true
+ends_at: date, presence: true
+active: booelan, presence: true
 
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :description, presence: true, length: { maximum: 500 }
-  validates :location, presence: true
-  validates :price, presence: true
-  validates :capacity, presence: true
-  validates :includes_food, presence: false
-  validates :include_drinks, presence: false
-  validates :starts_at, presence: true
-  validates :ends_at, presence: true,
-  validates :active, presence: true
 end
