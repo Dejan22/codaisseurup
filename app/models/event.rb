@@ -6,9 +6,9 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :price, presence: true
   validates :capacity, presence: true
-  validates :includes_food, presence: true
-  validates :include_drinks, presence: true
+  validates :includes_food, presence: false
+  validates :include_drinks, presence: false
   validates :starts_at, presence: true
-  validates :ends_at, presence: true
-  validatesn :active, presence: true
+  validates :ends_at, presence: true,
+  validates :active, presence: true
 end
